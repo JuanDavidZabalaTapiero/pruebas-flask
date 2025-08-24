@@ -1,0 +1,17 @@
+# Archivos temporales de Python
+*.pyc
+*.pyo
+*.pyd
+*.pyi
+
+# Carpetas __pycache__ en todos los niveles
+__pycache__/
+*/__pycache__/
+**/__pycache__/
+
+# Entornos virtuales
+.venv/
+venv/
+
+# Configuraciones de IDE
+.vscode/
