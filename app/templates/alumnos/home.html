@@ -1,9 +1,39 @@
 {% extends "base.html" %}
 
+<!-- FLASH -->
+{% set flash_categories = {
+'error_alumnos_home': 'alert-error'
+} %}
+
 <!-- TÍTULO -->
 {% block title %}Home | Alumnos{% endblock %}
 
 <!-- BODY -->
 {% block body %}
 <h1>TABLA ALUMNOS</h1>
+
+{% if alumnos %}
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for alumno in alumnos %}
+        <tr>
+            <td>{{alumno.id}}</td>
+            <td>{{alumno.nombres}}</td>
+            <td>{{alumno.apellidos}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No hay alumnos registrados</p>
+
+{% endif %}
+
 {% endblock %}

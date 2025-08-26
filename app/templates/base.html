@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <!-- FAVICON -->
-     <link rel="icon" href="{{url_for('static', filename='img/favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{url_for('static', filename='img/favicon.ico')}}" type="image/x-icon">
 </head>
+
 <body>
+    <!-- MENSAJES FLASH -->
+    {% for category, alert_class in flash_categories.items() %}
+    {% with messages = get_flashed_messages(category_filter=[category]) %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert {{alert_class}}">{{message}}</div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    {% endfor %}
+
     {% block body %}
     {% endblock %}
 </body>
+
 </html>
