@@ -1,7 +1,7 @@
 from flask import Flask
 from .extensions import db, migrate
 from .config import Config
-from .blueprints import regiser_blueprints
+from .blueprints import register_blueprints
 
 def create_app():
     """
@@ -23,6 +23,6 @@ def create_app():
     from app import models
 
     # == REGISTRAR BLUEPRINTS ==
-    regiser_blueprints(app)
+    register_blueprints(app)
 
     return app
