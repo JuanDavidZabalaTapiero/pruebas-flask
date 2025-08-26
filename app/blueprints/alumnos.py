@@ -4,4 +4,7 @@ alumnos_bp = Blueprint("alumnos", __name__)
 
 @alumnos_bp.route("/")
 def home():
-    return render_template("home.html")
+    """
+    Muestra la tabla de los alumnos
+    """
+    return render_template("alumnos/home.html")

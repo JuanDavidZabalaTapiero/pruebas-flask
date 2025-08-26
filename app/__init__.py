@@ -1,8 +1,14 @@
 from flask import Flask
 from .extensions import db, migrate
 from .config import Config
+from .blueprints import regiser_blueprints
 
 def create_app():
+    """
+    Crea y configura la app de Flask.
+
+    Returns: Flask: instancia de la aplicación.
+    """
 
     app = Flask(__name__)
 
@@ -13,11 +19,10 @@ def create_app():
     db.init_app(app)
     migrate.init_app(app, db)
 
-    # == MODELOS ==
+    # == IMPORTAR MODELOS ==
     from app import models
 
-    # == BLUEPRINTS ==
-    from .blueprints.alumnos import alumnos_bp
-    app.register_blueprint(alumnos_bp)
+    # == REGISTRAR BLUEPRINTS ==
+    regiser_blueprints(app)
 
     return app
