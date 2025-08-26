@@ -12,6 +12,8 @@
 {% block body %}
 <h1>TABLA ALUMNOS</h1>
 
+<a href="{{url_for('alumnos.registrar_alumno')}}">REGISTRAR</a>
+
 {% if alumnos %}
 <table border="1">
     <thead>

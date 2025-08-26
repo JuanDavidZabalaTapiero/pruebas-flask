@@ -3,7 +3,7 @@ from .extensions import db, migrate
 from .config import Config
 from .blueprints import register_blueprints
 
-def create_app():
+def create_app(config_class=Config):
     """
     Crea y configura la app de Flask.
 
@@ -13,7 +13,7 @@ def create_app():
     app = Flask(__name__)
 
     # == CONFIG ==
-    app.config.from_object(Config)
+    app.config.from_object(config_class)
 
     # == INICIALIZAR EXTENSIONES ==
     db.init_app(app)

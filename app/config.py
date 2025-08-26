@@ -11,3 +11,12 @@ class Config:
         f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+class TestConfig(Config):
+    """
+    Sobreescribe las configuraciones en común.
+    """
+    TESTING = True
+    SQLALCHEMY_DATABASE_URI = "sqlite:///:memory:"
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    WTF_CSRF_ENABLED = False

@@ -14,3 +14,7 @@ def home():
         flash("Ocurrió un error al intentar consultar los alumnos", "error_alumnos_home")
 
     return render_template("alumnos/home.html", alumnos=alumnos)
+
+@alumnos_bp.route("/registrar")
+def registrar_alumno():
+    return render_template("alumnos/registrar.html")
