@@ -1,3 +1,5 @@
+.env
+
 # Archivos temporales de Python
 *.pyc
 *.pyo

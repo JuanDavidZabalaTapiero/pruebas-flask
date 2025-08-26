@@ -8,3 +8,6 @@ mysqlclient==2.2.7
 # TESTS
 pytest==8.4.1
 pytest-flask==1.3.0
+
+# ENV
+python-dotenv==1.1.1
