@@ -1,5 +1,8 @@
 .env
 
+# Node modules
+node_modules/
+
 # Archivos temporales de Python
 *.pyc
 *.pyo

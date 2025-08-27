@@ -10,32 +10,40 @@
 
 <!-- BODY -->
 {% block body %}
-<h1>TABLA ALUMNOS</h1>
+<header>
+    <h1 class="page-title">Gestión de Alumnos</h1>
+    <nav class="actions">
+        <a href="{{ url_for('alumnos.registrar_alumno') }}" class="btn btn-primary">Registrar Alumno</a>
+    </nav>
+</header>
 
-<a href="{{url_for('alumnos.registrar_alumno')}}">REGISTRAR</a>
-
-{% if alumnos %}
-<table border="1">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombres</th>
-            <th>Apellidos</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for alumno in alumnos %}
-        <tr>
-            <td>{{alumno.id}}</td>
-            <td>{{alumno.nombres}}</td>
-            <td>{{alumno.apellidos}}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-{% else %}
-<p>No hay alumnos registrados</p>
-
-{% endif %}
+<main>
+    {% if alumnos %}
+    <section class="alumnos-section">
+        <table class="alumnos-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for alumno in alumnos %}
+                <tr>
+                    <td>{{ alumno.id }}</td>
+                    <td>{{ alumno.nombres }}</td>
+                    <td>{{ alumno.apellidos }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    {% else %}
+    <section class="empty-state">
+        <p>No hay alumnos registrados</p>
+    </section>
+    {% endif %}
+</main>
 
 {% endblock %}
