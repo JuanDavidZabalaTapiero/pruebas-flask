@@ -3,6 +3,9 @@ from app.models.alumnos import Alumno
 from unittest.mock import patch
 
 def test_home_sin_alumnos(client):
+    """
+    Si no se encuentran alumnos en la base de datos, debe mostrarse el mensaje correspondiente.
+    """
     response = client.get("/")
     html = response.get_data(as_text=True)
     assert response.status_code == 200
@@ -10,6 +13,9 @@ def test_home_sin_alumnos(client):
     assert "Registrar Alumno" in html
 
 def test_home_con_alumnos(client, session):
+    """
+    Si hay alumnos en la db, deben mostrarse en la página.
+    """
     alumno = Alumno(nombres="Juan", apellidos="Pérez")
     session.add(alumno)
     session.commit()
