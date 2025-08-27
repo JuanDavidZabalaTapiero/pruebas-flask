@@ -11,6 +11,7 @@
 
 <body>
     <!-- MENSAJES FLASH -->
+    {% if flask_categories %}
     {% for category, alert_class in flash_categories.items() %}
     {% with messages = get_flashed_messages(category_filter=[category]) %}
     {% if messages %}
@@ -20,6 +21,7 @@
     {% endif %}
     {% endwith %}
     {% endfor %}
+    {% endif %}
 
     {% block body %}
     {% endblock %}

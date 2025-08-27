@@ -9,12 +9,6 @@ def app():
     Crea la aplicación Flask para pruebas con BD en memoria.
     """
     app = create_app(TestConfig)
-    app.config.update({
-        "TESTING": True,
-        "SQLALCHEMY_DATABASE_URI": "sqlite:///:memory:",
-        "SQLALCHEMY_TRACK_MODIFICATIONS": False,
-        "WTF_CSRF_ENABLED": False,
-    })
     with app.app_context():
         db.create_all()
         yield app
