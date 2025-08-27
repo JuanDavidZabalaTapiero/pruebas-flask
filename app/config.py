@@ -14,7 +14,7 @@ class Config:
 
 class TestConfig(Config):
     """
-    Sobreescribe las configuraciones en común.
+    Configuración para test. Sobreescribe las configuraciones en común de "Config".
     """
     TESTING = True
     SQLALCHEMY_DATABASE_URI = "sqlite:///:memory:"

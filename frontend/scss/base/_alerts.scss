@@ -1,9 +1,20 @@
 @use "variables" as v;
 
-.alert-error {
-    background: v.$error-color;
-    color: #fff;
+.alert {
     padding: 0.75rem 1rem;
     border-radius: 6px;
     margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.alert-error {
+    @extend .alert;
+    background: v.$error-color;
+    color: #fff;
+}
+
+.alert-success {
+    @extend .alert;
+    background: v.$success-color;
+    color: #fff;
 }

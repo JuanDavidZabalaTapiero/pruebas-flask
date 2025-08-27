@@ -6,7 +6,7 @@ alumnos_bp = Blueprint("alumnos", __name__)
 @alumnos_bp.route("/")
 def home():
     """
-    Muestra la tabla de todos los alumnos registrados.
+    Muestra la tabla de todos los alumnos registrados junto con un botón para registrar uno nuevo.
     """
     alumnos = obtener_todos_alumnos()
 
