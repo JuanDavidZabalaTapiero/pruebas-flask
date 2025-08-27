@@ -5,14 +5,14 @@ const rename = require("gulp-rename");
 
 // RUTAS
 const paths = {
-    scss: "./scss/**/*.scss",
+    scss: "./scss/pages/**/*.scss",
     cssDest: "../app/static/css"
 };
 
 // COMPILAR SCSS -> CSS minificado
 function styles() {
     return gulp
-        .src("./scss/style.scss")
+        .src(paths.scss)
         .pipe(sass().on("error", sass.logError))
         .pipe(cleanCSS())
         .pipe(rename({ suffix: ".min" }))

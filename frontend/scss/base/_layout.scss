@@ -1,0 +1,22 @@
+@use "variables" as v;
+
+body {
+    font-family: v.$font-stack;
+    background: v.$background;
+    margin: 1rem;
+    color: #333;
+}
+
+.page-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.actions {
+    margin-bottom: 1rem;
+}
+
+.empty-state {
+    color: v.$secondary-color;
+    font-style: italic;
+}

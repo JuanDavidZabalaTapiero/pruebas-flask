@@ -1,0 +1,23 @@
+@use "variables" as v;
+@use "sass:color";
+
+.alumnos-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+        border: 1px solid v.$table-border;
+        padding: 0.5rem 1rem;
+        text-align: left;
+    }
+
+    th {
+        background: v.$secondary-color;
+        color: #fff;
+    }
+
+    tr:nth-child(even) {
+        background: color.adjust(v.$secondary-color, $lightness: 45%);
+    }
+}

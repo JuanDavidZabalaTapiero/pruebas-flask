@@ -8,6 +8,11 @@
 <!-- TÍTULO -->
 {% block title %}Home | Alumnos{% endblock %}
 
+<!-- CSS -->
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/home_alumnos.min.css')}}">
+{% endblock %}
+
 <!-- BODY -->
 {% block body %}
 <header>
