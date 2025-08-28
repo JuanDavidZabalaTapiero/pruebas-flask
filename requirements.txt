@@ -5,6 +5,9 @@ Flask-SQLAlchemy==3.1.1
 # DRIVER
 mysqlclient==2.2.7
 
+# FORMS
+Flask-WTF==1.2.2
+
 # MIGRACIONES
 Flask-Migrate==4.1.0
 

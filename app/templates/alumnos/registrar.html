@@ -1,9 +1,46 @@
 {% extends "base.html" %}
 
+<!-- FLASH -->
+{% set flash_categories = {
+'error_alumnos_registrar_alumno': 'alert-error',
+'success_alumnos_registrar_alumno': 'alert-error'
+} %}
+
 <!-- TÍTULO -->
 {% block title %}Registrar | Alumno{% endblock %}
 
 <!-- BODY -->
 {% block body %}
+
+<header>
+    <nav>
+        <a href="{{url_for('alumnos.home')}}">Volver</a>
+    </nav>
+</header>
+
 <h1>REGISTRAR - ALUMNO</h1>
+
+<form method="post">
+    {{form.hidden_tag() }}
+
+    <p>
+        {{form.nombres.label}}
+        {{form.nombres(size=32)}}
+        {% for error in form.nombres.errors %}
+        <span>{{error}}</span>
+        {% endfor %}
+    </p>
+
+    <p>
+        {{form.apellidos.label}}
+        {{form.apellidos(size=32)}}
+        {% for error in form.apellidos.errors %}
+        <span>{{error}}</span>
+        {% endfor %}
+    </p>
+
+    {{form.submit() }}
+
+</form>
+
 {% endblock %}
