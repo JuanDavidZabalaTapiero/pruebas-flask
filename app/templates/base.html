@@ -7,6 +7,8 @@
     <title>{% block title %}{% endblock %}</title>
     <!-- FAVICON -->
     <link rel="icon" href="{{url_for('static', filename='img/favicon.ico')}}" type="image/x-icon">
+    <!-- BOOTSTRAP CSS -->
+     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
     <!-- CSS -->
     {% block css %}{% endblock %}
 </head>
@@ -27,6 +29,9 @@
 
     {% block body %}
     {% endblock %}
+
+    <!-- BOOTSTRAP JS -->
+     <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
 </body>
 
 </html>

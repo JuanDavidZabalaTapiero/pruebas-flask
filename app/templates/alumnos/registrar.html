@@ -12,39 +12,49 @@
 <!-- BODY -->
 {% block body %}
 
-<header>
-    <nav>
-        <a href="{{url_for('alumnos.home')}}">Volver</a>
+<div class="container mt-4">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-light bg-light mb-4">
+        <div class="container-fluid">
+            <a href="{{ url_for('alumnos.home') }}" class="btn btn-outline-secondary">
+                ← Volver
+            </a>
+        </div>
     </nav>
-</header>
 
-<h1>REGISTRAR - ALUMNO</h1>
+    <!-- TÍTULO -->
+    <h1 class="mb-4">Registrar Alumno</h1>
 
-<svg class="icon" width="10px" height="10px">
-    <use xlink:href="{{ url_for('static', filename='icons/sprite.svg') }}#arrow-down"></use>
-</svg>
+    <!-- FORMULARIO -->
+    <form method="post" novalidate>
+        {{ form.hidden_tag() }}
 
-<form method="post">
-    {{form.hidden_tag() }}
+        <!-- NOMBRES -->
+        <div class="mb-3">
+            {{ form.nombres.label(class="form-label") }}
+            {{ form.nombres(class="form-control", size=32) }}
+            {% for error in form.nombres.errors %}
+            <div class="invalid-feedback d-block">{{ error }}</div>
+            {% endfor %}
+        </div>
 
-    <p>
-        {{form.nombres.label}}
-        {{form.nombres(size=32)}}
-        {% for error in form.nombres.errors %}
-        <span>{{error}}</span>
-        {% endfor %}
-    </p>
+        <!-- APELLIDOS -->
+        <div class="mb-3">
+            {{ form.apellidos.label(class="form-label") }}
+            {{ form.apellidos(class="form-control", size=32) }}
+            {% for error in form.apellidos.errors %}
+            <div class="invalid-feedback d-block">{{ error }}</div>
+            {% endfor %}
+        </div>
 
-    <p>
-        {{form.apellidos.label}}
-        {{form.apellidos(size=32)}}
-        {% for error in form.apellidos.errors %}
-        <span>{{error}}</span>
-        {% endfor %}
-    </p>
+        <!-- BOTÓN -->
+        <div class="mb-3">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
 
-    {{form.submit() }}
+    </form>
 
-</form>
+</div>
 
 {% endblock %}

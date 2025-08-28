@@ -25,7 +25,7 @@
 <main>
     {% if alumnos %}
     <section class="alumnos-section">
-        <table class="alumnos-table">
+        <table class="alumnos-table mb-5">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -49,6 +49,29 @@
         <p>No hay alumnos registrados</p>
     </section>
     {% endif %}
+
+    <!-- Botón para abrir modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">
+        Abrir Modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="miModalLabel">¡Funciona Bootstrap JS!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    Si ves este modal, tu Bootstrap JS está funcionando correctamente 🎉
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 {% endblock %}
