@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, flash
 from app.services.alumnos_service import obtener_todos_alumnos, crear_alumno
 from app.forms.alumnos import RegistroAlumnoForm
+from flask_babel import _
 
 alumnos_bp = Blueprint("alumnos", __name__)
 

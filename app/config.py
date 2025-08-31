@@ -12,6 +12,8 @@ class Config:
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     WTF_CSRF_ENABLED = True
+    BABEL_DEFAULT_LOCALE = 'es'
+    BABEL_SUPPORTED_LOCALES = ['es', 'en']
 
 class TestConfig(Config):
     """

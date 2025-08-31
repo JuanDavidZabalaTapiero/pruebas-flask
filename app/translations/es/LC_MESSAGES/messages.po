@@ -1,0 +1,57 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-08-30 21:20-0500\n"
+"PO-Revision-Date: 2025-08-30 20:36-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/templates/alumnos/home.html:19
+msgid "Gestión de Alumnos"
+msgstr "Gestión de Alumnos"
+
+#: app/templates/alumnos/home.html:21
+msgid "Registrar Alumno"
+msgstr "Registrar Alumno"
+
+#: app/templates/alumnos/home.html:32
+msgid "Nombres"
+msgstr "Nombres"
+
+#: app/templates/alumnos/home.html:33
+msgid "Apellidos"
+msgstr "Apellidos"
+
+#: app/templates/alumnos/home.html:49
+msgid "No hay alumnos registrados"
+msgstr "No hay alumnos registrados"
+
+#: app/templates/alumnos/home.html:54
+msgid ""
+"Abrir\n"
+"        Modal"
+msgstr "Abrir Modal"
+
+#: app/templates/alumnos/home.html:62
+msgid "¡Funciona Bootstrap JS!"
+msgstr "¡Funciona Bootstrap JS!"
+
+#: app/templates/alumnos/home.html:66
+msgid "Si ves este modal, tu Bootstrap JS está funcionando correctamente 🎉"
+msgstr "Si ves este modal, tu Bootstrap JS está funcionando correctamente 🎉"
+
+#: app/templates/alumnos/home.html:69
+msgid "Cerrar"
+msgstr "Cerrar"
+
