@@ -7,24 +7,23 @@
 } %}
 
 <!-- TÍTULO -->
-{% block title %}Registrar | Alumno{% endblock %}
+{% block title %}{{_("Registrar | Alumno")}}{% endblock %}
 
 <!-- BODY -->
 {% block body %}
+<!-- NAVBAR -->
+<nav class="navbar navbar-light bg-light mb-4">
+    <div class="container-fluid">
+        <a href="{{ url_for('alumnos.home') }}" class="btn btn-outline-secondary">
+            ← {{_("Volver")}}
+        </a>
+    </div>
+</nav>
 
 <div class="container mt-4">
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-light bg-light mb-4">
-        <div class="container-fluid">
-            <a href="{{ url_for('alumnos.home') }}" class="btn btn-outline-secondary">
-                ← Volver
-            </a>
-        </div>
-    </nav>
-
     <!-- TÍTULO -->
-    <h1 class="mb-4">Registrar Alumno</h1>
+    <h1 class="mb-4">{{_("Registrar Alumno")}}</h1>
 
     <!-- FORMULARIO -->
     <form method="post" novalidate>

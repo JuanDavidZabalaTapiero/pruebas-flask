@@ -13,7 +13,7 @@ def home():
     alumnos = obtener_todos_alumnos()
 
     if alumnos is None:
-        flash("Ocurrió un error al intentar consultar los alumnos", "error_alumnos_home")
+        flash(_("Ocurrió un error al intentar consultar los alumnos"), "error_alumnos_home")
 
     return render_template("alumnos/home.html", alumnos=alumnos)
 

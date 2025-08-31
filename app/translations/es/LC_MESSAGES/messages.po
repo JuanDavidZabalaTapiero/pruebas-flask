@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-08-30 21:20-0500\n"
+"POT-Creation-Date: 2025-08-31 12:24-0500\n"
 "PO-Revision-Date: 2025-08-30 20:36-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -17,11 +17,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
+#: app/blueprints/alumnos.py:16
+msgid "Ocurrió un error al intentar consultar los alumnos"
+msgstr "Ocurrió un error al intentar consultar los alumnos"
+
+#: app/templates/alumnos/home.html:9
+msgid "Home | Alumnos"
+msgstr "Home | Alumnos"
+
 #: app/templates/alumnos/home.html:19
 msgid "Gestión de Alumnos"
 msgstr "Gestión de Alumnos"
 
-#: app/templates/alumnos/home.html:21
+#: app/templates/alumnos/home.html:21 app/templates/alumnos/registrar.html:26
 msgid "Registrar Alumno"
 msgstr "Registrar Alumno"
 
@@ -54,4 +62,12 @@ msgstr "Si ves este modal, tu Bootstrap JS está funcionando correctamente 🎉"
 #: app/templates/alumnos/home.html:69
 msgid "Cerrar"
 msgstr "Cerrar"
+
+#: app/templates/alumnos/registrar.html:10
+msgid "Registrar | Alumno"
+msgstr "Registrar | Alumno"
+
+#: app/templates/alumnos/registrar.html:18
+msgid "Volver"
+msgstr "Volver"
 
