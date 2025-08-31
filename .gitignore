@@ -1,20 +1,26 @@
+# Entorno
 .env
 
-# Node modules
-node_modules/
+# Node.js
+frontend/node_modules/
+frontend/package-lock.json
 
-# Archivos temporales de Python
+# Docker
+mysql_data/
+*.pid
+*.log
+
+# Python
 *.pyc
 *.pyo
 *.pyd
 *.pyi
+*.egg-info/
 
-# Carpetas __pycache__ en todos los niveles
+# Cache y compilados
 __pycache__/
 */__pycache__/
 **/__pycache__/
-
-# Cache de tests
 .pytest_cache/
 
 # Entornos virtuales
@@ -25,5 +31,5 @@ venv/
 *.pot
 *.mo
 
-# Configuraciones de IDE
+# Configuración de IDE/editores
 .vscode/

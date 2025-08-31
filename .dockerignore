@@ -1,0 +1,29 @@
+# Ignorar git y configs
+.git
+.gitignore
+
+# Entornos
+.env
+venv/
+.venv/
+
+# Node
+frontend/node_modules
+frontend/package-lock.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Docker
+mysql_data/
+
+# Archivos temporales
+*.log
+*.pid
+
+# IDE/Editor
+.vscode/

@@ -1,10 +1,13 @@
 {
-  "name": "flask-frontend",
+  "name": "frontend",
   "version": "1.0.0",
   "description": "SCSS + Gulp setup for Flask",
   "scripts": {
     "dev": "gulp watch",
     "build": "gulp styles"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
   },
   "devDependencies": {
     "del": "^8.0.0",
@@ -15,8 +18,5 @@
     "gulp-sass": "^6.0.1",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.91.0"
-  },
-  "dependencies": {
-    "bootstrap": "^5.3.8"
   }
 }
