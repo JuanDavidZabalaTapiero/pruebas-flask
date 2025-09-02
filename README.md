@@ -1,4 +1,4 @@
-# Proyecto Flask Profesional 🚀
+# Proyecto Flask (prueba) 🚀
 
 [![Python](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-3.1.1-orange)](https://flask.palletsprojects.com/)
